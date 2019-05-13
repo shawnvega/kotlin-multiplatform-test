@@ -3,6 +3,7 @@ package com.example.multiplatformtest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import org.kotlin.mpp.mobile.CrossTest
 import org.kotlin.mpp.mobile.createApplicationScreenMessage
 
 class MainActivity : AppCompatActivity() {
