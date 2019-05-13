@@ -17,6 +17,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GJW-tQ-Io6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.94003349540000003" green="0.40086997959999998" blue="0.21564182330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.94003349540000003" green="0.40086997959999998" blue="0.21564182330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="N9l-Jp-47B"/>
@@ -34,40 +40,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Base URL..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uoq-kw-tNF">
-                                <rect key="frame" x="20" y="108" width="374" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uoq-kw-tNF" customClass="SkyFloatingLabelTextField" customModule="Kotlin_iOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="108" width="374" height="39"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="BASE URL"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Relative URL..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Cf-Fc-eC1">
-                                <rect key="frame" x="20" y="158" width="374" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Cf-Fc-eC1" customClass="SkyFloatingLabelTextField" customModule="Kotlin_iOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="177" width="374" height="39"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="RELATIVE URL"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Crop width..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chb-MI-pO1">
-                                <rect key="frame" x="20" y="208" width="374" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chb-MI-pO1" customClass="SkyFloatingLabelTextField" customModule="Kotlin_iOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="246" width="374" height="39"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="CROP WIDTH"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Crop height..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBa-Rq-GPb">
-                                <rect key="frame" x="20" y="258" width="374" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBa-Rq-GPb" customClass="SkyFloatingLabelTextField" customModule="Kotlin_iOS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="315" width="374" height="39"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="CROP HEIGHT"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3B7-Fv-bsS">
-                                <rect key="frame" x="178" y="328" width="58" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Submit"/>
+                                <rect key="frame" x="20" y="394" width="374" height="44"/>
+                                <color key="backgroundColor" red="0.94003349542617798" green="0.40086997956439258" blue="0.21564182327845668" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BLd-2i-IFs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MCk-Vu-bLz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2j-Jn-uYp">
-                                <rect key="frame" x="20" y="402" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="478" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,23 +104,24 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hBa-Rq-GPb" firstAttribute="top" secondItem="chb-MI-pO1" secondAttribute="bottom" constant="20" id="0KI-a6-VUo"/>
-                            <constraint firstItem="3B7-Fv-bsS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4sD-tt-YNn"/>
+                            <constraint firstItem="hBa-Rq-GPb" firstAttribute="top" secondItem="chb-MI-pO1" secondAttribute="bottom" constant="30" id="0KI-a6-VUo"/>
                             <constraint firstItem="3B7-Fv-bsS" firstAttribute="top" secondItem="hBa-Rq-GPb" secondAttribute="bottom" constant="40" id="6uc-Lh-wcL"/>
                             <constraint firstItem="3Cf-Fc-eC1" firstAttribute="trailing" secondItem="Uoq-kw-tNF" secondAttribute="trailing" id="94p-nz-rci"/>
                             <constraint firstItem="Z2j-Jn-uYp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GhU-gr-gwn"/>
-                            <constraint firstItem="3Cf-Fc-eC1" firstAttribute="top" secondItem="Uoq-kw-tNF" secondAttribute="bottom" constant="20" id="HQs-LC-3Vp"/>
+                            <constraint firstItem="3Cf-Fc-eC1" firstAttribute="top" secondItem="Uoq-kw-tNF" secondAttribute="bottom" constant="30" id="HQs-LC-3Vp"/>
                             <constraint firstItem="chb-MI-pO1" firstAttribute="leading" secondItem="Uoq-kw-tNF" secondAttribute="leading" id="N59-YJ-hcJ"/>
                             <constraint firstItem="Z2j-Jn-uYp" firstAttribute="top" secondItem="3B7-Fv-bsS" secondAttribute="bottom" constant="40" id="O3k-bG-JPv"/>
                             <constraint firstItem="Uoq-kw-tNF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OBa-vu-a6c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z2j-Jn-uYp" secondAttribute="trailing" constant="20" id="QJR-S6-Gby"/>
                             <constraint firstItem="hBa-Rq-GPb" firstAttribute="leading" secondItem="Uoq-kw-tNF" secondAttribute="leading" id="RNf-s2-6V0"/>
                             <constraint firstItem="hBa-Rq-GPb" firstAttribute="trailing" secondItem="Uoq-kw-tNF" secondAttribute="trailing" id="SN3-RS-2c2"/>
-                            <constraint firstItem="chb-MI-pO1" firstAttribute="top" secondItem="3Cf-Fc-eC1" secondAttribute="bottom" constant="20" id="SvN-yJ-mt1"/>
+                            <constraint firstItem="chb-MI-pO1" firstAttribute="top" secondItem="3Cf-Fc-eC1" secondAttribute="bottom" constant="30" id="SvN-yJ-mt1"/>
                             <constraint firstItem="3Cf-Fc-eC1" firstAttribute="leading" secondItem="Uoq-kw-tNF" secondAttribute="leading" id="Ws4-xV-mZq"/>
+                            <constraint firstItem="3B7-Fv-bsS" firstAttribute="leading" secondItem="Uoq-kw-tNF" secondAttribute="leading" id="ZaU-FX-Ov9"/>
                             <constraint firstItem="chb-MI-pO1" firstAttribute="trailing" secondItem="Uoq-kw-tNF" secondAttribute="trailing" id="cfR-gs-eiF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uoq-kw-tNF" secondAttribute="trailing" constant="20" id="ex7-nI-bU0"/>
                             <constraint firstItem="Uoq-kw-tNF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lM9-ye-yeB"/>
+                            <constraint firstItem="3B7-Fv-bsS" firstAttribute="trailing" secondItem="Uoq-kw-tNF" secondAttribute="trailing" id="tWc-Gp-TtO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

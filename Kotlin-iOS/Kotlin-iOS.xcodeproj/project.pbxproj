@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6F86CE3E2289D013006AFCC1 /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F86CE3D2289D013006AFCC1 /* SharedCode.framework */; };
 		6F86CE3F2289D013006AFCC1 /* SharedCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F86CE3D2289D013006AFCC1 /* SharedCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6F86CED82289EE95006AFCC1 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86CED52289EE95006AFCC1 /* UITextField+fixCaretPosition.swift */; };
+		6F86CED92289EE95006AFCC1 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86CED62289EE95006AFCC1 /* SkyFloatingLabelTextField.swift */; };
+		6F86CEDA2289EE95006AFCC1 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86CED72289EE95006AFCC1 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
 		6F9D30272289CE7000F58AA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D30262289CE7000F58AA9 /* AppDelegate.swift */; };
 		6F9D30292289CE7000F58AA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D30282289CE7000F58AA9 /* ViewController.swift */; };
 		6F9D302C2289CE7000F58AA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9D302A2289CE7000F58AA9 /* Main.storyboard */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		6F86CE3D2289D013006AFCC1 /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../SharedCode/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
+		6F86CED52289EE95006AFCC1 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		6F86CED62289EE95006AFCC1 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		6F86CED72289EE95006AFCC1 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		6F9D30232289CE7000F58AA9 /* Kotlin-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kotlin-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F9D30262289CE7000F58AA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F9D30282289CE7000F58AA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F86CED42289EE88006AFCC1 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				6F86CED62289EE95006AFCC1 /* SkyFloatingLabelTextField.swift */,
+				6F86CED72289EE95006AFCC1 /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				6F86CED52289EE95006AFCC1 /* UITextField+fixCaretPosition.swift */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
 		6F9D301A2289CE7000F58AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +89,7 @@
 		6F9D30252289CE7000F58AA9 /* Kotlin-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6F86CED42289EE88006AFCC1 /* Third Party */,
 				6F9D30262289CE7000F58AA9 /* AppDelegate.swift */,
 				6F9D30282289CE7000F58AA9 /* ViewController.swift */,
 				6F9D302A2289CE7000F58AA9 /* Main.storyboard */,
@@ -127,6 +144,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = 6F9D301A2289CE7000F58AA9;
 			productRefGroup = 6F9D30242289CE7000F58AA9 /* Products */;
@@ -176,7 +194,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F86CED82289EE95006AFCC1 /* UITextField+fixCaretPosition.swift in Sources */,
+				6F86CEDA2289EE95006AFCC1 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				6F9D30292289CE7000F58AA9 /* ViewController.swift in Sources */,
+				6F86CED92289EE95006AFCC1 /* SkyFloatingLabelTextField.swift in Sources */,
 				6F9D30272289CE7000F58AA9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

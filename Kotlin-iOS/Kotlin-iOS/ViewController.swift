@@ -26,19 +26,26 @@ class ViewController: UIViewController {
         relativeURLTextField.delegate = self
         cropWidthTextField.delegate = self
         cropHeightTextField.delegate = self
+        
+        baseURLTextField.text = "https://img.te2.io"
+        relativeURLTextField.text = "/imageURL.png"
+        cropWidthTextField.text = "640"
+        cropHeightTextField.text = "480"
     }
 
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         guard let baseURL = baseURLTextField.text, !baseURL.isEmpty,
             let relativeURL = relativeURLTextField.text, !relativeURL.isEmpty,
-            let cropWidth = cropWidthTextField.text, !cropWidth.isEmpty,
-            let cropHeight = cropHeightTextField.text, !cropHeight.isEmpty else {
+            let cropWidthString = cropWidthTextField.text, !cropWidthString.isEmpty,
+            let cropWidth = Int32(cropWidthString),
+            let cropHeightString = cropHeightTextField.text, !cropHeightString.isEmpty,
+            let cropHeight = Int32(cropHeightString) else {
                 thumborURLLabel.text = "Please fill out all the fields"
                 return
         }
         
-        let thumborURL = 
-        thumborURLLabel.text = "Thumbor URL: \(baseURL)\(relativeURL)\(cropWidth)\(cropHeight)"
+        let thumborURL = CommonKt.getFullThumborURL(baseUrl: baseURL, imgRelativePath: relativeURL, width: cropWidth, height: cropHeight)
+        thumborURLLabel.text = "Thumbor URL: \(thumborURL)"
     }
 }
 
